@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+nix-build -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixos-20.03.tar.gz IHaskell/release.nix --argstr compiler ghc865 --arg packages "haskellPackages: [ haskellPackages.lens haskellPackages.regex-posix ]" -o ./env
+env/bin/ihaskell-notebook
